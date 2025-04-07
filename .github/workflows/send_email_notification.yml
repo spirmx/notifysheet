@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install gspread oauth2client  # ไม่ต้องติดตั้ง smtplib เพราะมันมีมาแล้วใน Python
+          pip install gspread oauth2client  # ติดตั้งเฉพาะ gspread และ oauth2client
 
       - name: Run the script
         run: |
