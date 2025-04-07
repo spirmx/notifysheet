@@ -22,11 +22,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install gspread oauth2client smtplib
+          pip install gspread oauth2client  # ไม่ต้องติดตั้ง smtplib เพราะมันมีมาแล้วใน Python
 
       - name: Run the script
         run: |
-          python NotifySheet.py
+          python notifysheet.py
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
